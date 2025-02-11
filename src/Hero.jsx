@@ -1,11 +1,11 @@
-import heroImg from "./assets/hero.svg";
+import heroImg from "./assets/undraw_next-js_hy59.svg";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-center">
         <div className="hero-title">
-          <h1>Contentful cms</h1>
+          <h1>Contentful CMS</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
             sapiente temporibus fugit alias! Voluptatem fugit voluptates facere
