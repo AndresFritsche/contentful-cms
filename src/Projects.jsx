@@ -1,8 +1,9 @@
-import "./fetchProjects"
+import { useFetchProjects } from "./fetchProjects";
 
 const Projects = () => {
-  return (
-    <h2>Projects</h2>
-  )
-}
-export default Projects
+  const { loading, projects } = useFetchProjects();
+  console.log(loading, projects);
+
+  return <h2>Projects</h2>;
+};
+export default Projects;
