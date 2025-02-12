@@ -1,5 +1,5 @@
-import { client } from "./fetchProjects";
-
+import { useState, useEffect } from "react";
+import { createClient } from "contentful";
 
 const client = createClient({
   space: "j9llnn87k571",
@@ -14,10 +14,11 @@ export const useFetchServices = () => {
     try {
       const response = await client.getEntries({ content_type: "services" });
       const services = response.items.map((item) => {
-        const { title, url, image } = item.fields;
+        const { title, url, image, description} = item.fields;
         const id = item.sys.id;
         const img = image?.fields?.file?.url;
-        return { title, url, id, img };
+        
+        return { title, url, id, img, description};
       });
       setServices(services);
       setLoading(false);
