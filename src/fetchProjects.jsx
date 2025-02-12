@@ -1,7 +1,7 @@
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 
-const client = createClient({
+ const client = createClient({
   space: "j9llnn87k571",
   environment: "master",
   accessToken: "eTx2XZtMObOFCVgwDWIpVRTh8GNKvKqlieH4FsCMt-A",
@@ -21,6 +21,9 @@ export const useFetchProjects = () => {
       });
       setProjects(projects)
       setLoading(false);
+      
+      
+      
     } catch (error) {
       console.log(error);
       setLoading(false);
